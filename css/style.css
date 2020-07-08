@@ -1,0 +1,1441 @@
+* {
+    box-sizing: border-box;
+}
+
+html {
+    overflow-x: hidden;
+}
+
+a {
+    color: #fff;
+    text-decoration: none;
+}
+
+ul {
+    list-style: none;
+}
+
+body {
+    background-color: #fff;
+    color: #000;
+    font-size: 24px;
+    line-height: 28px;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+    overflow-x: hidden;
+}
+
+.title {
+    font-family: 'Righteous', cursive;
+    font-size: 56px;
+    line-height: 70px;
+    text-align: center;
+}
+
+.btn {
+    font-family: 'Righteous', cursive;
+    background-color: #06c8d9;
+}
+
+.page-section {
+    margin-top: 100px;
+}
+
+/*-----------------------------------------------------------
+-----------------------MAIN-PAGE(index.html)-----------------
+-------------------------------------------------------------  */
+
+.header {
+    height: 100vh;
+    background-image: url(../images/header-bg.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.container {
+    padding: 0 15px;
+    max-width: 1230px;
+    margin: 0 auto;
+}
+
+.header-top {
+    height: auto;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    /* background-color: #0b0b0b; */
+    padding: 8px 150px;
+    display: flex;
+    justify-content: space-around;
+}
+
+.header-top.fixed {
+    position: fixed;
+    background-color: #0b0b0b;
+}
+
+.menu.show .add-menu {
+    padding-bottom: 5px;
+}
+
+.logo {
+    cursor: pointer;
+    max-width: 180px;
+}
+
+.menu a {
+    font-family: 'Righteous', cursive;
+    margin-left: 54px;
+    transition: all 0.3s;
+}
+
+.menu a:hover {
+    color: #06c8d9;
+    border-bottom: 2px solid #fff;
+}
+
+.menu.show .topmenu {
+    margin-top: 30px;
+    display: flex;
+    flex-direction: column;
+}
+
+.menu .topmenu {
+    display: flex;
+}
+
+.topmenu {
+    position: relative;
+}
+
+.topmenu li {
+    margin-top: 12px;
+}
+
+.topmenu li:nth-child(5) {
+    position: relative;
+}
+
+ion-icon {
+    padding-left: 3px;
+    position: absolute;
+    z-index: 2;
+    top: 5px;
+}
+
+.submenu {
+    width: 220px;
+    position: absolute;
+    top: 40px;
+    z-index: 10;
+    -webkit-transition: 0.5s ease-in-out;
+    -moz-transition: 0.5s ease-in-out;
+    -o-transition: 0.5s ease-in-out;
+    transition: 0.5s ease-in-out;
+    transform: scaleY(0);
+    transform-origin: 0 0;
+}
+
+.submenu.fixed {
+    background-color: #0b0b0b;
+}
+
+.submenu li a:first-child {
+    padding-top: 10px;
+}
+
+.submenu li {
+    margin: 2px 0;
+    transition: all 0.5s;
+}
+
+.submenu li:last-child {
+    margin-bottom: 10px;
+}
+
+.submenu li:hover {
+    transform: scale(1.1);
+}
+
+.topmenu li:hover .submenu {
+    transform: scaleY(1);
+}
+
+.header-content__title {
+    text-transform: uppercase;
+    font-size: 56px;
+    line-height: 70px;
+    color: #fff;
+    font-family: 'Righteous', cursive;
+    padding-top: 330px;
+}
+
+.header-content__btn {
+    font-family: 'Righteous', cursive;
+    font-size: 30px;
+    line-height: 37px;
+    margin: 63px 0 0 86px;
+    text-align: center;
+    display: flex;
+    align-items: center;
+}
+
+.btn-play {
+    /* background-color: #0099CA;
+    border: 3px solid #0099CA; */
+    background-color: #06c8d9;
+    border: 3px solid #06c8d9;
+    padding: 10px 32px;
+    border-radius: 50px 0 0 50px;
+    transition: all 0.3s;
+}
+
+.btn-play:hover {
+    /* background: rgba(0, 153, 202, 0.3); */
+    background: rgba(0, 234, 255, 0.3);
+}
+
+.btn-know {
+    /* background: rgba(0, 153, 202, 0.3); */
+    background: rgba(0, 234, 255, 0.3);
+    /* border: 3px solid #0099CA; */
+    border: 3px solid #06c8d9;
+    padding: 10px 32px;
+    border-radius: 0 50px 50px 0;
+    transition: all 0.3s;
+}
+
+.btn-know:hover {
+    /* background-color: #0099CA; */
+    background-color: #06c8d9;
+}
+
+.statistics {
+    background-color: #0B0B0B;
+    color: #fff;
+}
+
+.statistics__items {
+    padding-top: 82px;
+    padding-bottom: 82px;
+    display: flex;
+    justify-content: space-around;
+}
+
+.statistics-item__title {
+    text-align: center;
+    font-family: 'Righteous', cursive;
+    font-size: 35px;
+    line-height: 43px;
+}
+
+.statistics-item__num {
+    position: relative;
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 56px;
+    line-height: 70px;
+    margin-left: 10px;
+}
+
+.statistics-item__num span {
+    position: absolute;
+    top: -20px;
+    font-size: 40px;
+    line-height: 50px;
+}
+
+.video {
+    margin-top: 50px;
+}
+
+.video-play {
+    margin-top: 18px;
+    text-align: center;
+}
+
+.main-title {
+    margin-bottom: 20px;
+}
+
+.main__inner {
+    position: relative;
+}
+
+.main__container {
+    max-width: 1230px;
+    padding: 0 15px;
+    margin: 0 auto;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+
+.main-body {
+    width: 50%;
+    margin-left: auto;
+    padding-left: 55px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    height: 100%;
+}
+
+.main-text__dev {
+    font-family: 'Righteous', cursive;
+}
+
+.main-text__dev span {
+    /* color: #0099CA; */
+    color: #06c8d9;
+}
+
+.leagues {
+    margin-top: 60px;
+}
+
+.leagues-title {
+    margin-bottom: 20px;
+}
+
+.leagues__inner {
+    display: flex;
+    justify-content: space-between;
+}
+
+.leagues__content {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+
+}
+
+.leagues-btn {
+    margin-left: 100px;
+    border-radius: 50px 10px 50px 10px;
+    max-width: 255px;
+    padding: 12px 16px;
+    transition: all 0.3s;
+}
+
+.leagues-btn:hover {
+    background-color: #00C1FF;
+}
+
+.best-leagues__text {
+    font-family: 'Righteous', cursive;
+    text-align: center;
+    font-size: 30px;
+    line-height: 37px;
+}
+
+.best-leagues__images {
+    margin-top: 10px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.best-leagues__images img {
+    width: 33%;
+    transition: all 0.3s;
+}
+
+.best-leagues__images img:hover {
+    transform: scale(1.05);
+}
+
+.reviews {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url(../images/reviews-bg.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+.reviews-title {
+    padding-top: 50px;
+    color: #fff;
+}
+
+.reviews__inner {
+    margin-top: 100px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.reviews-item {
+    margin-bottom: 100px;
+    display: flex;
+}
+
+.reviews-item__text {
+    padding-left: 30px;
+    position: relative;
+    color: #fff;
+    width: 496px;
+}
+
+.reviews-item__text::before {
+    content: '';
+    position: absolute;
+    background-image: url('../images/reviews-line.png');
+    left: 0;
+    top: -17px;
+    color: #0099CA;
+    height: 162px;
+    width: 3px;
+}
+
+.reviews-item__foto {
+    margin-right: 30px;
+    position: relative;
+    max-width: 181px;
+    color: #fff;
+}
+
+.reviews-item__foto-img {
+    text-align: center;
+}
+
+.reviews-item__foto-img img {
+    border-radius: 50%;
+}
+
+.help__inner {
+    display: flex;
+    justify-content: space-between;
+}
+
+.help-title {
+    margin-bottom: 20px;
+}
+
+.help__text {
+    width: 604px;
+}
+
+.help__links {
+    font-family: 'Righteous', cursive;
+    margin-right: 100px;
+    margin-top: 20px;
+}
+
+.help__links-item {
+    margin-bottom: 60px;
+    display: flex;
+    align-items: center;
+}
+
+.help__links-item_link {
+    position: relative;
+    padding-left: 110px;
+    color: #000;
+}
+
+.help__links-item_link-poe::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    background-image: url('../images/poe-logo.png');
+    height: 67px;
+    width: 88px;
+    top: -15px;
+}
+
+.help__links-item_link-ninja::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    background-image: url('../images/poeninja-logo.png');
+    height: 77px;
+    width: 75px;
+    top: -15px;
+}
+
+.mechanics-title {
+    margin-bottom: 20px;
+}
+
+.mechanics__text {
+    text-align: center;
+    font-family: 'Righteous', cursive;
+    font-size: 30px;
+    line-height: 37px;
+}
+
+.mechanics__buttons {
+    margin-top: 60px;
+    display: flex;
+    justify-content: center;
+}
+
+.mechanics-btn {
+    font-size: 22px;
+    line-height: 27px;
+    border-radius: 50px;
+    transition: all 0.3s;
+}
+
+.mechanics-btn:hover {
+    background-color: #00C1FF;
+}
+
+.mechanics-btn+.mechanics-btn {
+    margin-left: 86px;
+}
+
+.mechanics-btn__leagues {
+    padding: 15px 48px;
+}
+
+.mechanics-btn__skills {
+    padding: 15px 18px;
+}
+
+.mechanics-btn__classes {
+    padding: 15px 9px;
+}
+
+.info__text {
+    text-align: center;
+    font-size: 24px;
+    line-height: 28px;
+    margin-top: 10px;
+    margin-bottom: 48px;
+}
+
+.info-button {
+    text-align: center;
+}
+
+.info-btn {
+    padding: 13px 37px;
+    border-radius: 50px;
+    font-size: 24px;
+    line-height: 30px;
+    transition: all 0.3s;
+}
+
+.info-btn:hover {
+    background-color: #00C1FF;
+}
+
+.footer {
+    background-color: #1b1b1b
+}
+
+.footer__inner {
+    padding: 80px 0;
+    display: flex;
+    justify-content: space-between;
+}
+
+.footer__item {
+    width: 33%;
+}
+
+.footer-title {
+    font-family: 'Righteous', cursive;
+    text-align: center;
+    text-transform: uppercase;
+    color: #fff;
+    font-size: 24px;
+}
+
+.footer__item .item-text {
+    font-size: 20px;
+    margin-top: 15px;
+    text-align: center;
+    color: #999999;
+}
+
+.social {
+    margin-top: 15px;
+    display: flex;
+}
+
+.social--footer {
+    justify-content: center;
+}
+
+.social__item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    margin-right: 4px;
+    background-color: #fff;
+    border: 1px solid #e8ecee;
+    transition: background 0.1s linear;
+}
+
+.social__item:hover {
+    background-color: #e8ecee;
+}
+
+.social__item:hover .social__icon {
+    fill: #000;
+}
+
+.social--footer .social__item {
+    background-color: transparent;
+    border-width: 2px;
+    border-color: #fff;
+    border-radius: 2px;
+}
+
+.social--footer .social__item:hover {
+    background-color: #fff;
+}
+
+.social__icon {
+    display: block;
+    height: 18px;
+    fill: #c6cacc;
+    transition: fill 0.1s linear;
+}
+
+.social--footer .social__icon {
+    fill: #fff;
+}
+
+.footer__item-btn {
+    margin-left: 85px;
+    margin-top: 27px;
+}
+
+.footer-btn {
+    border-radius: 50px;
+    padding: 9px 52px;
+    transition: all 0.3s;
+}
+
+.footer-btn:hover {
+    background-color: #00C1FF;
+}
+
+.copyright {
+    display: flex;
+    align-items: center;
+    background-color: #141414;
+    height: 90px;
+}
+
+.copyright__text {
+    text-align: center;
+    font-size: 20px;
+    color: #999999;
+}
+
+.copyright__text span {
+    color: #fff;
+}
+
+/*-----------------------------------------------------------
+---------------------ABOUT-LEAGUES(leagues.html)-------------
+-------------------------------------------------------------  */
+
+.leagues-info__title {
+    margin-bottom: 30px;
+}
+
+.leagues-info__text {
+    margin-bottom: 20px;
+}
+
+.leagues-example {
+    margin-top: 50px;
+}
+
+.leagues-example__inner {
+    display: flex;
+    justify-content: space-between;
+}
+
+.leagues-example__content {
+    margin-left: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.leagues-example__content-title {
+    font-weight: 700;
+}
+
+/*-----------------------------------------------------------
+---------------------ABOUT-SKILLS(skills.html)-------------
+-------------------------------------------------------------  */
+
+.skill-gems {
+    margin-top: 50px;
+}
+
+.skill-gems__title {
+    padding-top: 50px;
+    color: #fff;
+}
+
+.skill-gems .container {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url(../images/skill-gems-bg.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    height: 692px;
+}
+
+.skill-gems__inner {
+    display: flex;
+    justify-content: space-between;
+}
+
+.skill-gems__items {
+    margin-left: 84px;
+    display: flex;
+    flex-wrap: wrap;
+    width: 300px;
+}
+
+.skill-gems__img {
+    margin: 0 10px 40px 10px;
+}
+
+.skill-gems__images-sword {
+    margin: 20px 0 0 142px;
+}
+
+.skill-gems__content {
+    margin-left: 230px;
+    color: #fff;
+    font-size: 22px;
+    line-height: 26px;
+}
+
+.skill-gems__text  {
+    margin-top: 20px;
+}
+
+.armour {
+    margin-top: 50px;
+}
+
+.armour-title {
+    margin-bottom: 10px;
+}
+
+.armour__inner {
+    display: flex;
+    justify-content: space-around;
+}
+
+.armour__content {
+    margin-left: 50px;
+}
+
+.armour__text {
+    margin-top: 10px;
+    width: 550px;
+}
+
+.armour__image {
+    position: relative;
+    margin: 20px 120px 0px 0;
+}
+
+.armour-sockets-img {
+    position: absolute;
+    top: 35px;
+    right: 20px;
+}
+
+.armour-sockets-img {
+    display: none;
+}
+
+.armour-sockets-img.active {
+    display: inherit;
+}
+
+.currency__content {
+    margin: 10px 25px 0 25px;
+}
+
+.currency__text {
+    width: 1150px;
+}
+
+.currency__images {
+    margin-top: 20px;
+    text-align: center;
+}
+
+.currency__images img,
+.currency__images a {
+    margin: 0 15px;
+}
+
+.currency__images:first-child {
+    margin-top: -50px;
+}
+
+/*-----------------------------------------------------------
+---------------------ABOUT-CLASSES(classes.html)-------------
+-------------------------------------------------------------  */
+
+.classes__content {
+    margin: 0 30px;
+}
+
+.classes__text {
+    margin: 10px 0;
+}
+
+.classes-items {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.classes__item {
+    width: 330px;
+    margin: 20px 5px 40px 5px;
+}
+
+.classes__item-name {
+    font-family: 'Righteous', cursive;
+    font-size: 35px;
+    line-height: 43px;
+    text-align: center;
+}
+
+.passive-tree {
+    margin-top: 60px;
+}
+
+.passive-tree__content {
+    margin: 10px 15px 20px 15px;
+}
+
+.passive-tree__img img{
+    width: 1200px;
+}
+
+.passive-tree__text {
+    width: 1170px;
+}
+
+/*--------------- BURGER ---------------*/
+
+#menuToggle {
+    margin-top: 9px;
+    overflow: hidden;
+    display: none;
+    flex-direction: column;
+}
+
+#menuToggle input {
+    display: flex;
+    width: 60px;
+    height: 60px;
+    position: absolute;
+    cursor: pointer;
+    opacity: 0;
+    /* hide input */
+    z-index: 1;
+    /* top of the menu */
+}
+
+#menuToggle span {
+    display: none;
+    width: 50px;
+    height: 6px;
+    margin-bottom: 10px;
+    background: #ffffff;
+    border-radius: 4px;
+    -webkit-transition: all .5s cubic-bezier(.08, .81, .87, .71);
+    -moz-transition: all .5s cubic-bezier(.08, .81, .87, .71);
+    -ms-transition: all .5s cubic-bezier(.08, .81, .87, .71);
+    -o-transition: all .5s cubic-bezier(.08, .81, .87, .71);
+    transition: all .5s cubic-bezier(.08, .81, .87, .71);
+}
+
+#span1 {
+    transform-origin: 4px 0px;
+}
+
+#span3 {
+    transform-origin: bottom right;
+}
+
+#menuToggle input:checked~#span1 {
+    background-color: #06c8d9;
+    transform: rotate(45deg) translate(8px);
+}
+
+#menuToggle input:checked~#span2 {
+    background-color: #06c8d9;
+    transform: rotate(495deg) translate(4px);
+}
+
+#menuToggle input:checked~#span3 {
+    background-color: #06c8d9;
+    transform: rotate(45deg);
+    opacity: 0;
+}
+
+
+/*--------------- MEDIA ---------------*/
+
+@media (max-width: 1650px) {
+    .header-content__title {
+        font-size: 56px;
+        line-height: 70px;
+        padding-top: 300px;
+    }
+
+    .main__container {
+        position: static;
+    }
+
+    .main-img {
+        text-align: center;
+    }
+
+    .main-img img {
+        width: 1200px;
+    }
+
+    .main-body {
+        width: 100%;
+        padding-left: 0;
+    }
+
+    .main__text {
+        margin: 10px 0;
+    }
+}
+
+@media (max-width: 1300px) {
+
+    .header-content__title {
+        font-size: 46px;
+        line-height: 65px;
+        padding-top: 280px;
+    }
+
+    .video-play {
+        margin: 10px 50px 0 50px;
+    }
+
+    .video-play iframe {
+        width: 100%;
+    }
+
+    .main-img img {
+        width: 100%;
+    }
+
+    .leagues__inner {
+        flex-direction: column;
+    }
+
+    .leagues__img img {
+        width: 100%;
+    }
+
+    .leagues-btn {
+        margin: 30px 0 30px 100px;
+    }
+
+    .leagues__text {
+        margin-bottom: 20px;
+    }
+
+    .help__links {
+        margin-right: 40px;
+    }
+
+    .mechanics__buttons {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+    }
+
+    .mechanics-btn+.mechanics-btn {
+        margin: 20px 0 0 0;
+    }
+    .leagues-info__img img{
+        width: 100%;
+    }
+    .leagues-example__inner {
+        flex-direction: column-reverse;
+    }
+    .leagues-example__content {
+        margin: 0;
+        width: 100%;
+    }
+    .leagues-example__img{
+        text-align: center;
+    }
+    .skill-gems__content {
+        margin-left: 150px;
+    }
+    .currency__content {
+        margin: 0;
+    }
+    .currency__text {
+        width: 100%;
+    } 
+    .passive-tree__content {
+        margin: 10px 0 20px 0;
+    }
+    .passive-tree__text {
+        width: 100%;
+    }
+    .passive-tree__img {
+        margin: 0 -15px;
+    }
+    .passive-tree__img img{
+        width: 100%;
+    }
+}
+
+@media (max-width: 1000px) {
+    .title {
+        font-size: 44px;
+        line-height: 60px;
+    }
+    .menu {
+        display: none;
+        width: 100%;
+        justify-content: flex-end;
+        position: absolute;
+        top: 70px;
+        right: -100%;
+        transition: all 0.5s;
+    }
+    .menu.show {
+        display: flex;
+        right: 0;
+    }
+    .menu .topmenu {
+        display: none;
+    }
+    .menu .topmenu li,
+    .menu .submenu ul {
+        padding-right: 110px;
+    }
+
+    .submenu {
+        right: 37px;
+    }
+
+    .header-top {
+        padding: 8px 0px;
+    }
+
+    #menuToggle {
+        display: flex;
+    }
+
+    #menuToggle span {
+        display: flex;
+    }
+    .header-content__title {
+        font-size: 40px;
+    }
+
+    .header-content__btn {
+        font-size: 26px;
+        line-height: 37px;
+        margin: 40px 0 0 86px;
+    }
+
+    .btn-play {
+        padding: 6px 20px;
+    }
+
+    .btn-know {
+        padding: 6px 20px;
+    }
+
+    .video-play iframe {
+        height: 420px;
+    }
+
+    .best-leagues__images img {
+        width: 50%;
+    }
+
+    .best-leagues__text {
+        font-size: 26px;
+        line-height: 32px;
+    }
+
+    .help__inner {
+        flex-direction: column;
+    }
+
+    .help__text {
+        width: 100%;
+    }
+
+    .help__links {
+        margin: 30px 0 0 0;
+        display: flex;
+        justify-content: space-around;
+    }
+
+    .mechanics__text {
+        font-size: 28px;
+        line-height: 34px;
+    }
+    .footer__item-btn {
+        margin-left: 50px;
+    }
+    .skill-gems {
+        padding: 20px 0;
+    }
+    .skill-gems .container {
+        height: auto;
+    }
+    .skill-gems__inner {
+        flex-direction: column-reverse;
+        padding-bottom: 50px;
+    }
+    .skill-gems__content {
+        width: 100%;
+        margin: 0;
+    }
+    .skill-gems__images {
+        display: flex;
+        justify-content: space-around;
+    }
+    .skill-gems__images-sword {
+        margin-left: 0;
+    }
+    .skill-gems__items {
+        margin: 40px 0 0 0;
+    }
+    .armour__inner {
+        flex-direction: column;
+    }
+    .armour__content {
+        margin-left: 0;
+    }
+    .armour__text {
+        width: 100%;
+    }
+    .armour__image {
+        margin-right: 0;
+    }
+    .classes__content {
+        margin: 0;
+    }
+    .classes__text {
+        width: 100%;
+    }
+}
+
+@media (max-width: 880px) {
+    .video-play iframe {
+        height: 370px;
+    }
+
+    .reviews-item {
+        align-items: center;
+        flex-direction: column;
+    }
+
+    .reviews-item__foto {
+        margin: 0;
+        position: relative;
+        padding-bottom: 30px;
+    }
+
+    .reviews-item__foto::after {
+        content: '';
+        position: absolute;
+        background-image: url('../images/reviews-line.png');
+        left: -13px;
+        top: 150px;
+        color: #0099CA;
+        height: 2px;
+        width: 200px;
+    }
+
+    .reviews-item__foto.joana::after {
+        left: -40px;
+    }
+
+    .reviews-item__text {
+        padding: 0;
+    }
+
+    .reviews-item__text::before {
+        display: none;
+    }
+    .footer__inner {
+        align-items: center;
+        flex-direction: column;
+    }
+    .footer__item {
+        width: 100%;
+    }
+    .footer__item+.footer__item {
+        margin-top: 40px;
+    }
+    .footer__item-btn {
+        text-align: center;
+        margin-left: 0;
+    }
+    .topmenu {
+        background-color: #0b0b0bbb;
+    } 
+    .submenu {
+        background-color: #0b0b0bbb;
+    } 
+}
+
+@media (max-width: 770px) {
+    .title {
+        font-size: 36px;
+        line-height: 50px;
+    }
+
+    .header-content__title {
+        font-size: 34px;
+    }
+
+    .header-content__btn {
+        font-size: 26px;
+        line-height: 30px;
+        margin: 30px 0 0 66px;
+    }
+
+    .btn-play {
+        padding: 6px 20px;
+    }
+
+    .btn-know {
+        padding: 6px 20px;
+    }
+
+    .statistics__items {
+        padding: 50px 0 50px 0px;
+        display: flex;
+        justify-content: space-around;
+    }
+
+    .statistics-item__title {
+        font-size: 28px;
+        line-height: 38px;
+    }
+
+    .statistics-item__num {
+        font-size: 42px;
+        line-height: 60px;
+    }
+
+    .statistics-item__num span {
+        top: -20px;
+        font-size: 28px;
+        line-height: 50px;
+    }
+
+    .video-play {
+        margin: 5px 0 0 0;
+    }
+
+    .best-leagues__text {
+        font-size: 24px;
+        line-height: 32px;
+    }
+    .mechanics__text {
+        font-size: 26px;
+        line-height: 32px;
+    }
+}
+
+@media (max-width: 650px) {
+    .best-leagues__images img {
+        width: 100%;
+    }
+
+    .help__links {
+        margin: 30px auto 0 auto;
+        flex-direction: column;
+    }
+    .leagues-example__img img {
+        width: 75%;
+    }
+    .skill-gems__images {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+}
+
+@media (max-height: 650px) {
+    .header-content__title {
+        padding-top: 220px;
+    }
+}
+
+@media (max-width: 540px) {
+    .title {
+        font-size: 34px;
+        line-height: 40px;
+    }
+
+    .header-content__title {
+        line-height: 40px;
+        font-size: 34px;
+    }
+
+    .header-content__btn {
+        margin: 30px 0 0 15px;
+    }
+
+    .statistics__items {
+        padding: 40px 0 40px 0px;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .statistics-item {
+        padding: 10px 0 10px 0;
+    }
+
+    .statistics-item__title {
+        text-align: center;
+        font-family: 'Righteous', cursive;
+        font-size: 35px;
+        line-height: 43px;
+    }
+
+    .statistics-item__num {
+        position: relative;
+        text-align: center;
+        text-transform: uppercase;
+        font-size: 56px;
+        line-height: 70px;
+        margin-left: 10px;
+    }
+
+    .statistics-item__num span {
+        position: absolute;
+        top: -20px;
+        font-size: 40px;
+        line-height: 50px;
+    }
+
+    .main__text,
+    .main-text__dev {
+        font-size: 22px;
+        line-height: 26px;
+    }
+
+    .leagues-btn {
+        margin: 30px 0 30px 70px;
+    }
+
+    .reviews-item__text {
+        font-size: 22px;
+        line-height: 26px;
+        width: auto;
+    }
+    .mechanics__text {
+        font-size: 24px;
+        line-height: 30px;
+    }
+    .leagues-example__img img {
+        width: 100%;
+    }
+    .classes__item {
+        margin: 10px 5px 20px 5px;
+    }
+}
+
+@media (max-width: 470px) {
+    .leagues-btn {
+        margin: 30px 0 30px 10px;
+    }
+    .mechanics-btn {
+        font-size: 20px;
+        line-height: 24px;
+    }
+    .mechanics-btn__leagues {
+        padding: 12px 24px;
+    }
+    .mechanics-btn__skills {
+        padding: 12px 8px;
+    }
+    .mechanics-btn__classes {
+        padding: 12px 8px;
+    }
+    .copyright__text {
+        font-size: 18px;
+    }
+}
+
+@media (max-width: 390px) {
+
+    .header-content__title {
+        line-height: 40px;
+        font-size: 32px;
+    }
+
+    .header-content__btn {
+        font-size: 24px;
+        line-height: 30px;
+        margin: 30px 0 0 2px;
+    }
+
+    .btn-play {
+        padding: 4px 9px;
+    }
+
+    .btn-know {
+        padding: 4px 9px;
+    }
+    .leagues-btn {
+        text-align: center;
+        font-size: 22px;
+    }
+    .help__links-item_link {
+        padding-left: 100px;
+        font-size: 22px;
+    }
+    .mechanics__buttons {
+        margin: 40px -15px 0 -15px;
+    }
+    .mechanics-btn {
+        margin: 0 -15px;
+        font-size: 18px;
+        line-height: 24px;
+    }
+    .mechanics-btn__leagues {
+        padding: 12px 24px;
+    }
+    
+    .mechanics-btn__skills {
+        padding: 12px 8px;
+    }
+    
+    .mechanics-btn__classes {
+        padding: 12px 8px;
+    }
+    .classes__item-img img{
+        width: 100%;
+    }
+
+}

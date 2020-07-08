@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>PoEGame</title>
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Righteous&family=Roboto:wght@400;700&display=swap">
+    <link rel="stylesheet" href="css/aos.css">
+    <link rel="stylesheet" href="css/slick.css">
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="apple-touch-icon" sizes="180x180" href="images/favicons/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="images/favicons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="images/favicons/favicon-16x16.png">
+    <link rel="manifest" href="images/favicons/site.webmanifest">
+    <link rel="mask-icon" href="images/favicons/safari-pinned-tab.svg" color="#06c8d9">
+    <meta name="msapplication-TileColor" content="#00aba9">
+    <meta name="theme-color" content="#ffffff">
+</head>
+
+<svg style="display: none;">
+    <symbol id='facebook' viewBox="0 0 430.113 430.114">
+        <g>
+            <path
+                d="M158.081,83.3c0,10.839,0,59.218,0,59.218h-43.385v72.412h43.385v215.183h89.122V214.936h59.805
+                            c0,0,5.601-34.721,8.316-72.685c-7.784,0-67.784,0-67.784,0s0-42.127,0-49.511c0-7.4,9.717-17.354,19.321-17.354
+                            c9.586,0,29.818,0,48.557,0c0-9.859,0-43.924,0-75.385c-25.016,0-53.476,0-66.021,0C155.878-0.004,158.081,72.48,158.081,83.3z" />
+        </g>
+    </symbol>
+
+    <symbol id="twitter" viewBox="0 0 512 512">
+        <g>
+            <path d="M512,97.248c-19.04,8.352-39.328,13.888-60.48,16.576c21.76-12.992,38.368-33.408,46.176-58.016
+                    c-20.288,12.096-42.688,20.64-66.56,25.408C411.872,60.704,384.416,48,354.464,48c-58.112,0-104.896,47.168-104.896,104.992
+                    c0,8.32,0.704,16.32,2.432,23.936c-87.264-4.256-164.48-46.08-216.352-109.792c-9.056,15.712-14.368,33.696-14.368,53.056
+                    c0,36.352,18.72,68.576,46.624,87.232c-16.864-0.32-33.408-5.216-47.424-12.928c0,0.32,0,0.736,0,1.152
+                    c0,51.008,36.384,93.376,84.096,103.136c-8.544,2.336-17.856,3.456-27.52,3.456c-6.72,0-13.504-0.384-19.872-1.792
+                    c13.6,41.568,52.192,72.128,98.08,73.12c-35.712,27.936-81.056,44.768-130.144,44.768c-8.608,0-16.864-0.384-25.12-1.44
+                    C46.496,446.88,101.6,464,161.024,464c193.152,0,298.752-160,298.752-298.688c0-4.64-0.16-9.12-0.384-13.568
+                    C480.224,136.96,497.728,118.496,512,97.248z" />
+        </g>
+    </symbol>
+
+    <symbol id="linkedin" viewBox="0 0 512 512">
+        <g>
+            <path
+                d="m475.074219 0h-438.148438c-20.394531 0-36.925781 16.53125-36.925781 36.925781v438.148438c0 20.394531 16.53125 36.925781 36.925781 36.925781h438.148438c20.394531 0 36.925781-16.53125 36.925781-36.925781v-438.148438c0-20.394531-16.53125-36.925781-36.925781-36.925781zm-293.464844 387h-62.347656v-187.574219h62.347656zm-31.171875-213.1875h-.40625c-20.921875 0-34.453125-14.402344-34.453125-32.402344 0-18.40625 13.945313-32.410156 35.273437-32.410156 21.328126 0 34.453126 14.003906 34.859376 32.410156 0 18-13.53125 32.402344-35.273438 32.402344zm255.984375 213.1875h-62.339844v-100.347656c0-25.21875-9.027343-42.417969-31.585937-42.417969-17.222656 0-27.480469 11.601563-31.988282 22.800781-1.648437 4.007813-2.050781 9.609375-2.050781 15.214844v104.75h-62.34375s.816407-169.976562 0-187.574219h62.34375v26.558594c8.285157-12.78125 23.109375-30.960937 56.1875-30.960937 41.019531 0 71.777344 26.808593 71.777344 84.421874zm0 0" />
+        </g>
+    </symbol>
+</svg>
+
+<body>
+
+    <header class="header">
+        <div class="container">
+            <div class="header-top">
+                <a class="logo" href="index.html">
+                    <img src="images/logo.png" alt="">
+                </a>
+                <nav class="menu" id="menu">
+                    <ul class="topmenu">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="leagues.html">Leagues</a></li>
+                        <li><a href="skills.html">Skills</a></li>
+                        <li><a href="classes.html">Classes</a></li>
+                        <li class="add-menu"><a href="#">Help <ion-icon name="caret-down-outline"></ion-icon> </a>
+                            <ul class="submenu">
+                                <li><a href="#" data-scroll="#leagues">Leagues</a></li>
+                                <li><a href="#" data-scroll="#example">Example</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </nav>
+                <div id="menuToggle">
+                    <input type="checkbox" />
+                    <span id="span1"></span>
+                    <span id="span2"></span>
+                    <span id="span3"></span>
+                </div>
+            </div>
+            <div class="header-content" data-aos="fade-in" data-aos-delay="200">
+                <div class="header-content__title">
+                    What you should know about leagues
+                </div>
+                <div class="header-content__btn">
+                    <div class="btn-play">
+                        <a href="#">Play now</a>
+                    </div>
+                    <div class="btn-know">
+                        <a href="#">Know more</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <section class="leagues-info page-section" id="leagues">
+        <div class="container">
+            <div class="leagues-info__title title" data-aos="fade-in" data-aos-delay="200">About leagues</div>
+            <div class="leagues-info__inner">
+                <div class="leagues-info__content">
+                    <p class="leagues-info__text" data-aos="fade-right" data-aos-delay="200">
+                        The game offers several alternate play modes. The following permanent leagues are available:
+                    </p>
+                    <ul class="leagues-info__text" data-aos="fade-left" data-aos-delay="200">
+                        <li>
+                            Standard – The default gameplay league. Characters who die here respawn in the last city
+                            visited (with experience loss at higher levels).
+                        </li>
+                        <li>
+                            Hardcore (HC) – Characters cannot be resurrected but instead respawn back in the Standard
+                            league. This mode is analogous to permadeath in other games.
+                        </li>
+                        <li>
+                            Solo Self Found (SSF) – Characters cannot join a party with other players, and may not trade
+                            with other players. This type of gameplay forces characters to find or craft their own
+                            items.
+                        </li>
+                        <li>
+                            Current temporary (challenge) leagues.
+                        </li>
+                    </ul>
+                    <p class="leagues-info__text" data-aos="fade-right" data-aos-delay="200">
+                        Other leagues are usually designed for specific events. They have their own set of rules, item
+                        accessibility and aftermath. These rules widely vary depending on the league. For example, timed
+                        "Descent" league features another map set, new monster sets and rewards, but characters in this
+                        league are no longer available for playing after the league ends. "Turbo solo immolation"
+                        leagues, as another example, are running on the same maps as standard modes, but with much
+                        harder monsters, no partying, replacing physical damage with fire damage and monsters exploding
+                        on death—and return the survivors to Hardcore league (while dead characters resurrect in
+                        Standard). Racing leagues last between 30 minutes and 1 week. The permanent leagues have
+                        counterpart ladder leagues with different rulesets that last three months.
+                    </p>
+                    <p class="leagues-info__text" data-aos="fade-left" data-aos-delay="200">
+                        Now is coming a new league “Harvest”, it will take about 3 months and then will be a new league.
+                    </p>
+                </div>
+                <div class="leagues-info__img" data-aos="zoom-in" data-aos-delay="200">
+                    <img src="images/leagues-info-img.jpg" alt="">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="leagues-example" id="example">
+        <div class="container">
+            <div class="leagues-example__inner">
+                <div class="leagues-example__img" data-aos="fade-right" data-aos-delay="200">
+                    <img src="images/leagues-example-img.jpg" alt="">
+                </div>
+                <div class="leagues-example__content" data-aos="fade-left" data-aos-delay="200">
+                    <div class="leagues-example__content-title">
+                        For example here is information about the previous league “Delirium”:
+                    </div>
+                    <p class="leagues-example__text">
+                        The Delirium league and Hardcore Delirium league are the current challenge leagues. They
+                        launched on March 13, 2020 (UTC) or March 14 New Zealand local time, alongside the Version
+                        3.10.0 patch.
+                    </p>
+                    <p class="leagues-example__text">
+                        In this league, each area contains a Mirror of Delirium. When players pass through the mirror,
+                        it creates a fog of Delirium that spawns new enemies and makes existing enemies tougher. The fog
+                        will continue to spread out, and the deeper players venture out, the stronger enemies get.
+                        Defeating enemies in the fog adds extra rewards, and enemies within the Delirium can drop
+                        Delirium Orbs, which add a layer of Delirium to the entire map, and splinters that combine into
+                        a gateway to the Simulacrum. Enemies in the Delirium can also drop Cluster Jewels, which are
+                        socketed in the outermost sockets in the passive skill tree to create an entire cluster of
+                        passive skills and can be modified to grant different passive skills.
+                    </p>
+                    <p class="leagues-example__text">
+                        All characters and stashes will be moved to Standard league and Hardcore league respectively
+                        when the leagues end. Characters that die in the Hardcore Delirium league are immediately moved
+                        to the permanent Standard league.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer page-section">
+        <div class="container">
+            <div class="footer__inner">
+                <div class="footer__item" data-aos="fade-right" data-aos-delay="200">
+                    <div class="footer-title">About PoEGame</div>
+                    <div class="item-text">
+                        PoEGame it’s a website about game “PathOfExile”, the main information about it which can help
+                        you to start playing it.
+                    </div>
+                </div>
+                <div class="footer__item" data-aos="zoom-in" data-aos-delay="200">
+                    <div class="footer-title">Share With Love</div>
+                    <div class="social social--footer">
+                        <a class='social__item' href="#" target="_blank">
+                            <svg class="social__icon">
+                                <use xlink:href='#facebook'></use>
+                            </svg>
+                        </a>
+                        <a class='social__item' href="#" target="_blank">
+                            <svg class="social__icon">
+                                <use xlink:href='#twitter'></use>
+                            </svg>
+                        </a>
+                        <a class='social__item' href="#" target="_blank">
+                            <svg class="social__icon">
+                                <use xlink:href='#linkedin'></use>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+                <div class="footer__item" data-aos="fade-left" data-aos-delay="200">
+                    <div class="footer__item-btn">
+                        <a href="#" class="footer-btn btn">Play now</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <section class="copyright">
+        <div class="container">
+            <div class="copyright__text">
+                <div>Copyright © 2020 TGames. All Rights Reserved</div>
+                <div>Made <span>by Kormylo Vitaliy</span></div>
+            </div>
+        </div>
+    </section>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://unpkg.com/ionicons@5.1.2/dist/ionicons.js"></script>
+    <script src="js/aos.js"></script>
+    <script src="js/main.js"></script>
+
+</body>
+
+</html>

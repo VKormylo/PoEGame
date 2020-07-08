@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>PoEGame</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Righteous&family=Roboto&display=swap">
+    <link rel="stylesheet" href="css/aos.css">
+    <link rel="stylesheet" href="css/slick.css">
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="apple-touch-icon" sizes="180x180" href="images/favicons/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="images/favicons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="images/favicons/favicon-16x16.png">
+    <link rel="manifest" href="images/favicons/site.webmanifest">
+    <link rel="mask-icon" href="images/favicons/safari-pinned-tab.svg" color="#06c8d9">
+    <meta name="msapplication-TileColor" content="#00aba9">
+    <meta name="theme-color" content="#ffffff">
+</head>
+<svg style="display: none;">
+    <symbol id='facebook' viewBox="0 0 430.113 430.114">
+        <g>
+            <path
+                d="M158.081,83.3c0,10.839,0,59.218,0,59.218h-43.385v72.412h43.385v215.183h89.122V214.936h59.805
+                        c0,0,5.601-34.721,8.316-72.685c-7.784,0-67.784,0-67.784,0s0-42.127,0-49.511c0-7.4,9.717-17.354,19.321-17.354
+                        c9.586,0,29.818,0,48.557,0c0-9.859,0-43.924,0-75.385c-25.016,0-53.476,0-66.021,0C155.878-0.004,158.081,72.48,158.081,83.3z" />
+        </g>
+    </symbol>
+
+    <symbol id="twitter" viewBox="0 0 512 512">
+        <g>
+            <path d="M512,97.248c-19.04,8.352-39.328,13.888-60.48,16.576c21.76-12.992,38.368-33.408,46.176-58.016
+                c-20.288,12.096-42.688,20.64-66.56,25.408C411.872,60.704,384.416,48,354.464,48c-58.112,0-104.896,47.168-104.896,104.992
+                c0,8.32,0.704,16.32,2.432,23.936c-87.264-4.256-164.48-46.08-216.352-109.792c-9.056,15.712-14.368,33.696-14.368,53.056
+                c0,36.352,18.72,68.576,46.624,87.232c-16.864-0.32-33.408-5.216-47.424-12.928c0,0.32,0,0.736,0,1.152
+                c0,51.008,36.384,93.376,84.096,103.136c-8.544,2.336-17.856,3.456-27.52,3.456c-6.72,0-13.504-0.384-19.872-1.792
+                c13.6,41.568,52.192,72.128,98.08,73.12c-35.712,27.936-81.056,44.768-130.144,44.768c-8.608,0-16.864-0.384-25.12-1.44
+                C46.496,446.88,101.6,464,161.024,464c193.152,0,298.752-160,298.752-298.688c0-4.64-0.16-9.12-0.384-13.568
+                C480.224,136.96,497.728,118.496,512,97.248z" />
+        </g>
+    </symbol>
+
+    <symbol id="linkedin" viewBox="0 0 512 512">
+        <g>
+            <path
+                d="m475.074219 0h-438.148438c-20.394531 0-36.925781 16.53125-36.925781 36.925781v438.148438c0 20.394531 16.53125 36.925781 36.925781 36.925781h438.148438c20.394531 0 36.925781-16.53125 36.925781-36.925781v-438.148438c0-20.394531-16.53125-36.925781-36.925781-36.925781zm-293.464844 387h-62.347656v-187.574219h62.347656zm-31.171875-213.1875h-.40625c-20.921875 0-34.453125-14.402344-34.453125-32.402344 0-18.40625 13.945313-32.410156 35.273437-32.410156 21.328126 0 34.453126 14.003906 34.859376 32.410156 0 18-13.53125 32.402344-35.273438 32.402344zm255.984375 213.1875h-62.339844v-100.347656c0-25.21875-9.027343-42.417969-31.585937-42.417969-17.222656 0-27.480469 11.601563-31.988282 22.800781-1.648437 4.007813-2.050781 9.609375-2.050781 15.214844v104.75h-62.34375s.816407-169.976562 0-187.574219h62.34375v26.558594c8.285157-12.78125 23.109375-30.960937 56.1875-30.960937 41.019531 0 71.777344 26.808593 71.777344 84.421874zm0 0" />
+        </g>
+    </symbol>
+</svg>
+
+<body>
+
+    <header class="header">
+        <div class="container">
+            <div class="header-top">
+                <a class="logo" href="index.html">
+                    <img src="images/logo.png" alt="">
+                </a>
+                <nav class="menu" id="menu">
+                    <ul class="topmenu">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="leagues.html">Leagues</a></li>
+                        <li><a href="skills.html">Skills</a></li>
+                        <li><a href="classes.html">Classes</a></li>
+                        <li class="add-menu"><a>Help<ion-icon name="caret-down-outline"></ion-icon> </a>
+                            <ul class="submenu">
+                                <li><a href="#" data-scroll="#statistics">Statistics</a></li>
+                                <li><a href="#" data-scroll="#main">Main</a></li>
+                                <li><a href="#" data-scroll="#leagues">Leagues</a></li>
+                                <li><a href="#" data-scroll="#reviews">Reviews</a></li>
+                                <li><a href="#" data-scroll="#help">Help</a></li>
+                                <li><a href="#" data-scroll="#mechanics">Mechanics</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </nav>
+                <div id="menuToggle">
+                    <input type="checkbox" />
+                    <span id="span1"></span>
+                    <span id="span2"></span>
+                    <span id="span3"></span>
+                </div>
+
+            </div>
+            <div class="header-content" data-aos="fade-in" data-aos-delay="200">
+                <div class="header-content__title">
+                    The best game of the genre
+                </div>
+                <div class="header-content__btn">
+                    <div class="btn-play">
+                        <a href="#">Play now</a>
+                    </div>
+                    <div class="btn-know">
+                        <a href="#">Know more</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <section class="statistics" id="statistics">
+        <div class="container">
+            <div class="statistics__items">
+                <div class="statistics-item" data-aos="fade-right" data-aos-delay="200">
+                    <div class="statistics-item__title">Online</div>
+                    <div class="statistics-item__num">
+                        50000
+                        <span>+</span>
+                    </div>
+                </div>
+                <div class="statistics-item" data-aos="fade-up" data-aos-delay="200">
+                    <div class="statistics-item__title">Exiles</div>
+                    <div class="statistics-item__num">
+                        7
+                    </div>
+                </div>
+                <div class="statistics-item" data-aos="fade-left" data-aos-delay="200">
+                    <div class="statistics-item__title">Skills</div>
+                    <div class="statistics-item__num">
+                        100
+                        <span>+</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="video" data-aos="zoom-in" data-aos-delay="200">
+        <div class="container">
+            <h3 class="video-title title">New league is coming!</h1>
+                <div class="video-play">
+                    <iframe width="1024" height="520" src="https://www.youtube.com/embed/Tv12xh498ms" frameborder="0"
+                        allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                        allowfullscreen></iframe>
+                </div>
+        </div>
+    </section>
+    <!---->
+    <section class="main page-section" id="main">
+        <div class="container">
+            <h3 class="main-title title" data-aos="fade-in" data-aos-delay="200">Main information</h3>
+        </div>
+        <div class="main__inner">
+            <div class="main-img" data-aos="fade-right" data-aos-delay="200">
+                <img src="images/main-img.jpg" alt="">
+            </div>
+            <div class="main-content">
+                <div class="main__container">
+                    <div class="main-body" data-aos="fade-left" data-aos-delay="200">
+                        <p class="main__text">Path of Exile is a free-to-play action role-playing video game. Following
+                            an open beta
+                            phase,
+                            the game was released for Microsoft Windows in October 2013. A version for Xbox One was
+                            released in August 2017, and a PlayStation 4 version was released in March 2019.
+                        </p>
+                        <p class="main__text">The player controls a single character from an overhead perspective and
+                            explores large
+                            outdoor areas and caves or dungeons, battling monsters and fulfilling quests from
+                            non-player
+                            characters (NPCs) to gain experience points and equipment.
+                        </p>
+                        <div class="main-text__dev">
+                            Developer: <span>Grinding Gear Games.</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="leagues" id="leagues">
+        <div class="container">
+            <h3 class="leagues-title title" data-aos="fade-in" data-aos-delay="200">Leagues</h3>
+            <div class="leagues__inner">
+                <div class="leagues__content" data-aos="fade-right" data-aos-delay="200">
+                    <p class="leagues__text">
+                        The game offers several alternate play modes. The following permanent leagues are available:
+                    </p>
+                    <ul class="leagues__list">
+                        <li>Standard</li>
+                        <li>Hardcore (HC)</li>
+                        <li>Solo Self Found (SSF)</li>
+                        <li>Current temporary (challenge) league</li>
+                    </ul>
+                    <div class="leagues-btn btn">
+                        <a href="leagues.html">More about leagues</a>
+                    </div>
+                </div>
+                <div class="leagues__img" data-aos="fade-left" data-aos-delay="200">
+                    <img src="images/leagues-img.jpg" alt="">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="best-leagues page-section">
+        <h3 class="best-leagues__title title" data-aos="fade-in" data-aos-delay="200">The best leagues</h3>
+        <div class="best-leagues__text" data-aos="fade-in" data-aos-delay="200">
+            From 3.6 Synthesis to 3.11 Harvest
+        </div>
+        <div class="best-leagues__images" data-aos="fade-in" data-aos-delay="200">
+            <img src="images/best-leagues-img-1.jpg" alt="">
+            <img src="images/best-leagues-img-2.jpg" alt="">
+            <img src="images/best-leagues-img-3.jpg" alt="">
+            <img src="images/best-leagues-img-4.jpg" alt="">
+            <img src="images/best-leagues-img-5.jpg" alt="">
+            <img src="images/best-leagues-img-6.jpg" alt="">
+        </div>
+    </section>
+
+    <section class="reviews page-section" id="reviews">
+        <div class="container">
+            <h3 class="reviews-title title" data-aos="fade-in" data-aos-delay="200">What people say about game</h3>
+            <div class="reviews__inner">
+                <div class="reviews-item" data-aos="fade-right" data-aos-delay="200">
+                    <div class="reviews-item__foto">
+                        <div class="reviews-item__foto-img">
+                            <img src="images/milton-foto.png" alt="">
+                        </div>
+                        <div class="reviews-item__foto-name">
+                            Milton Chapman
+                        </div>
+                    </div>
+
+                    <div class="reviews-item__text">
+                        It’s really the best game of the genre!
+                        And what is amazing that it’s free-to-play.
+                        Yes, there is a lot of things in magazine that
+                        can help you but it’s not very important.
+                    </div>
+                </div>
+                <div class="reviews-item" data-aos="fade-left" data-aos-delay="200">
+                    <div class="reviews-item__foto joana">
+                        <div class="reviews-item__foto-img">
+                            <img src="images/joana-foto.png" alt="">
+                        </div>
+                        <div class="reviews-item__foto-name">
+                            Joana Silva
+                        </div>
+                    </div>
+
+                    <div class="reviews-item__text">
+                        It’s really the best game of the genre!
+                        And what is amazing that it’s free-to-play.
+                        Yes, there is a lot of things in magazine that
+                        can help you but it’s not very important.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="help page-section" id="help">
+        <div class="container">
+            <h3 class="help-title title" data-aos="fade-in" data-aos-delay="200">Help</h3>
+            <div class="help__inner">
+                <div class="help__text" data-aos="fade-right" data-aos-delay="200">
+                    There are a lot of different mechanics in this game and for new players it’s difficult to play.As
+                    result they won’t play it that’s why you should use different sites and videos that can help you
+                    with gaming procces.You can watch guides on YouTube and then it will be very interesting for you to
+                    play this game. So here are the most helpful sites for everyone:
+                </div>
+                <div class="help__links" data-aos="fade-left" data-aos-delay="200">
+                    <div class="help__links-item">
+                        <a href="#" class="help__links-item_link help__links-item_link-poe">pathofexile.com</a>
+                    </div>
+                    <div class="help__links-item">
+                        <a href="#" class="help__links-item_link help__links-item_link-ninja">poe.ninja</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="mechanics page-section" id="mechanics">
+        <div class="container">
+            <h3 class="mechanics-title title" data-aos="fade-in" data-aos-delay="200">Mechanics</h3>
+            <div class="mechanics__text" data-aos="fade-in" data-aos-delay="200">
+                It’s the main information about this game, if you want to know more press:
+            </div>
+            <div class="mechanics__buttons" data-aos="zoom-in" data-aos-delay="200">
+                <a class="mechanics-btn mechanics-btn__leagues btn" href="leagues.html">More about leagues</a>
+                <a class="mechanics-btn mechanics-btn__skills btn" href="skills.html">About skills, items and
+                    currency</a>
+                <a class="mechanics-btn mechanics-btn__classes btn" href="classes.html">About passive tree, classes</a>
+            </div>
+        </div>
+    </section>
+
+    <section class="info page-section">
+        <div class="container">
+            <h3 class="info-title title" data-aos="fade-in" data-aos-delay="200">Info</h3>
+            <div class="info__text" data-aos="fade-in" data-aos-delay="200">
+                It’s not an official website of the game, it’s like an inspiration around game and<br> just a game
+                project.
+                So if you want to go to the official website here is the link:
+            </div>
+            <div class="info-button" data-aos="zoom-in" data-aos-delay="200">
+                <a class="info-btn btn" href="#">pathofexile.com</a>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer page-section">
+        <div class="container">
+            <div class="footer__inner">
+                <div class="footer__item" data-aos="fade-right" data-aos-delay="200">
+                    <div class="footer-title">About PoEGame</div>
+                    <div class="item-text">
+                        PoEGame it’s a website about game “PathOfExile”, the main information about it which can help
+                        you to start playing it.
+                    </div>
+                </div>
+                <div class="footer__item" data-aos="zoom-in" data-aos-delay="200">
+                    <div class="footer-title">Share With Love</div>
+                    <div class="social social--footer">
+                        <a class='social__item' href="#" target="_blank">
+                            <svg class="social__icon">
+                                <use xlink:href='#facebook'></use>
+                            </svg>
+                        </a>
+                        <a class='social__item' href="#" target="_blank">
+                            <svg class="social__icon">
+                                <use xlink:href='#twitter'></use>
+                            </svg>
+                        </a>
+                        <a class='social__item' href="#" target="_blank">
+                            <svg class="social__icon">
+                                <use xlink:href='#linkedin'></use>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+                <div class="footer__item">
+                    <div class="footer__item-btn">
+                        <a href="#" class="footer-btn btn">Play now</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <section class="copyright">
+        <div class="container">
+            <div class="copyright__text">
+                <div>Copyright © 2020 TGames. All Rights Reserved</div>
+                <div>Made <span>by Kormylo Vitaliy</span></div>
+            </div>
+        </div>
+    </section>
+
+</body>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script src="https://unpkg.com/ionicons@5.1.2/dist/ionicons.js"></script>
+<script src="js/aos.js"></script>
+<script src="js/main.js"></script>
+
+</html>
