@@ -646,6 +646,10 @@ ion-icon {
     margin-bottom: 30px;
 }
 
+.leagues-info__img img {
+    width: 1230px;
+}
+
 .leagues-info__text {
     margin-bottom: 20px;
 }
